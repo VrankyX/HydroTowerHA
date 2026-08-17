@@ -1,0 +1,76 @@
+title: Hydroponik Tower
+views:
+  - title: Übersicht
+    path: hydroponik
+    icon: mdi:sprout
+    cards:
+      - type: entities
+        title: Status
+        entities:
+          - sensor.hydroponik_tower_status
+          - binary_sensor.hydroponik_tower_betriebssicher
+          - binary_sensor.hydroponik_tower_nachfullen
+          - binary_sensor.hydroponik_tower_uberfullung
+          - binary_sensor.hydroponik_tower_fullstandsensor
+      - type: gauge
+        entity: sensor.hydroponik_tower_fullstand
+        name: Füllstand relativ zum Soll
+        min: 0
+        max: 110
+      - type: entities
+        title: Wasserstand
+        entities:
+          - sensor.hydroponik_tower_fullhohe
+          - sensor.hydroponik_tower_wassermenge
+      - type: history-graph
+        title: Füllstand – 48 Stunden
+        hours_to_show: 48
+        entities:
+          - sensor.hydroponik_tower_fullhohe
+          - sensor.hydroponik_tower_wassermenge
+      - type: button
+        name: NOT-AUS
+        icon: mdi:alert-octagon
+        tap_action:
+          action: perform-action
+          perform_action: hydroponic_tower.emergency_stop
+          data:
+            reason: Manuell vom Dashboard
+      - type: button
+        name: Einmal bewässern
+        icon: mdi:water-pump
+        tap_action:
+          action: perform-action
+          perform_action: hydroponic_tower.water_once
+      - type: horizontal-stack
+        cards:
+          - type: button
+            name: pH+
+            icon: mdi:plus-circle
+            tap_action:
+              action: perform-action
+              perform_action: hydroponic_tower.dose_ph_plus
+              confirmation:
+                text: pH+ wirklich dosieren?
+          - type: button
+            name: pH−
+            icon: mdi:minus-circle
+            tap_action:
+              action: perform-action
+              perform_action: hydroponic_tower.dose_ph_minus
+              confirmation:
+                text: pH− wirklich dosieren?
+          - type: button
+            name: Dünger
+            icon: mdi:bottle-tonic-plus
+            tap_action:
+              action: perform-action
+              perform_action: hydroponic_tower.dose_nutrient
+              confirmation:
+                text: Dünger wirklich dosieren?
+      - type: entities
+        title: Tagesmengen
+        entities:
+          - sensor.hydroponik_tower_ph_heute
+          - sensor.hydroponik_tower_ph_heute_2
+          - sensor.hydroponik_tower_dunger_heute

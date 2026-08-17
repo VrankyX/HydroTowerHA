@@ -1,0 +1,16 @@
+{
+  "title": "Hydroponic Tower",
+  "config": {
+    "abort": {"single_instance_allowed": "Es kann nur ein Hydroponic Tower eingerichtet werden."},
+    "step": {"user": {"title": "Hydroponic Tower einrichten", "description": "Wähle die bereits in Home Assistant vorhandenen Geräte und Sensoren.", "data": {
+      "name":"Name", "pump":"Shelly Hauptpumpe", "ph_plus":"Tuya Relais pH+", "ph_minus":"Tuya Relais pH−", "nutrient":"Tuya Relais Dünger", "grow_light":"Tuya Relais Grow-LED", "leak":"Tuya Lecksensor", "ph_sensor":"Yinmik pH-Sensor", "ec_sensor":"Yinmik EC-Sensor", "water_temp":"Yinmik Wassertemperatur", "distance":"A02YYUW Abstandssensor"
+    }}}
+  },
+  "options": {"step": {"init": {"title":"Hydroponik-Einstellungen", "description":"Automatiken sind standardmäßig deaktiviert. Erst nach Kalibrierung aktivieren.", "data": {
+    "sensor_to_bottom_cm":"Sensor bis Behälterboden (cm)", "critical_level_cm":"Kritische Mindestfüllhöhe (cm)", "refill_level_cm":"Nachfüllgrenze (cm)", "target_level_cm":"Sollfüllhöhe (cm)", "overfill_level_cm":"Überfüllungsgrenze (cm)",
+    "watering_enabled":"Bewässerungsautomatik", "watering_run_sec":"Pumpenlaufzeit (s)", "watering_pause_min":"Pumpenpause (min)",
+    "ph_auto_enabled":"Automatische pH-Regelung", "ph_min":"pH-Untergrenze", "ph_max":"pH-Obergrenze", "ph_plus_pulse_sec":"pH+ Impuls (s)", "ph_minus_pulse_sec":"pH− Impuls (s)", "ph_plus_ml_sec":"pH+ Förderleistung (ml/s)", "ph_minus_ml_sec":"pH− Förderleistung (ml/s)", "ph_daily_limit_ml":"pH-Tageslimit je Mittel (ml)",
+    "nutrient_auto_enabled":"Automatische Düngerdosierung", "ec_min":"EC-Untergrenze (µS/cm)", "nutrient_pulse_sec":"Düngerimpuls (s)", "nutrient_ml_sec":"Dünger Förderleistung (ml/s)", "nutrient_daily_limit_ml":"Dünger-Tageslimit (ml)",
+    "mix_time_min":"Mischzeit (min)", "dose_lock_min":"Dosiersperrzeit (min)", "water_temp_max":"Maximale Wassertemperatur (°C)", "grow_light_auto_enabled":"Grow-LED-Automatik", "grow_light_on":"Grow-LED EIN (HH:MM)", "grow_light_off":"Grow-LED AUS (HH:MM)"
+  }}}}
+}

@@ -1,0 +1,20 @@
+emergency_stop:
+  name: Not-Aus
+  description: Schaltet Hauptpumpe, Dosierpumpen und Grow-LED aus.
+  fields:
+    reason:
+      name: Grund
+      selector:
+        text:
+water_once:
+  name: Einmal bewässern
+  description: Führt einen abgesicherten Bewässerungszyklus aus.
+dose_ph_plus:
+  name: pH+ dosieren
+  description: Führt einen begrenzten pH+-Dosierimpuls aus.
+dose_ph_minus:
+  name: pH− dosieren
+  description: Führt einen begrenzten pH−-Dosierimpuls aus.
+dose_nutrient:
+  name: Dünger dosieren
+  description: Führt einen begrenzten Dünger-Dosierimpuls aus.

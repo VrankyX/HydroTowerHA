@@ -1,0 +1,10 @@
+{
+  "domain": "hydroponic_tower",
+  "name": "Hydroponic Tower",
+  "version": "0.1.0",
+  "config_flow": true,
+  "documentation": "https://github.com/DEIN_GITHUB_NAME/hydroponic-tower",
+  "issue_tracker": "https://github.com/DEIN_GITHUB_NAME/hydroponic-tower/issues",
+  "codeowners": [],
+  "iot_class": "calculated"
+}
