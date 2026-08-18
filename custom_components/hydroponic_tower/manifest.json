@@ -1,10 +1,11 @@
 {
   "domain": "hydroponic_tower",
   "name": "HydroTowerHA",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "config_flow": true,
   "documentation": "https://github.com/VrankyX/HydroTowerHA",
   "issue_tracker": "https://github.com/VrankyX/HydroTowerHA/issues",
   "codeowners": [],
+  "integration_type": "hub",
   "iot_class": "calculated"
 }
